@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.card {
+    width: 70%;
+    height: 25em;
+    background-color: #fff;
+    position: relative;
+}
+
+.img-container {
+    width: 50%;
+    height: 25em;
+    background-image: url(images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+}
+
+.description-container {
+    width: 59%;
+    height: 25em;
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+    padding: 3em;
+}
+
+.title {
+    font-size: 1.7em;
+    color: hsl(217, 19%, 35%);
+}
+
+.text {
+    font-size: 18px;
+    color: hsl(214, 17%, 51%);
+}
+
+.text-padding {
+    padding: 1em 0;
+    line-height: 1.5;
+    letter-spacing: 1.5;
+}
+
+.infor-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 1.5em;
+}
+
+.avatar-container {
+    width: 4em;
+    border-radius: 35px;
+    margin-right: 1rem;
+}
+
+.share-btn {
+    position: absolute;
+    right: 2em;
+    background-image: url(images/icon-share.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-x: 0.6em;
+    background-position-y: 0.6em;
+    background-color: hsl(217, 19%, 35%);
+    border: 0;
+    border-radius: 30px;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+}
+
+.share-box {
+    width: 18em;
+    height:4em;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 10px;
+    position: absolute;
+    right: -4em;
+    bottom: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.share-btn:hover {
+    border: 3px solid;
+    border-color: hsl(212, 23%, 69%);
+}
+
+.share-box span {
+    font-size: 0.9em;
+    color: hsl(210, 46%, 95%);
+    letter-spacing: 1em;
+}
+
+.share-box:before {
+    content: "";
+    position: absolute;
+    width: 0em;
+    height: 0em;
+    border: 10px solid;
+    border-color: hsl(217, 19%, 35%);
+    background-color: hsl(217, 19%, 35%);
+    bottom: -0.6em;
+    left: 7.4em;
+    transform: rotate(-45deg);
+}
+
+.share-box img {
+    cursor: pointer;
+    transition: 1.8s;
+    transform: rotateZ('angle');
+}
+
+.share-box img:hover {
+    width: 2em;
+}
+
+@media (max-width: 900px) {
+    .card {
+        width: 20em;
+        height: 34.5em;
+    }
+
+    .img-container {
+        width: 100%;
+        height: 25em;
+    }
+
+    .description-container {
+        width: 100%;
+        height: 20em;
+        bottom: 1em;
+        padding: 2em;
+    }
+
+
+    .title {
+        font-size: 1em;
+        color: hsl(217, 19%, 35%);
+    }
+    
+    .text {
+        font-size: 13px;
+        color: hsl(214, 17%, 51%);
+    }
+
+    .avatar-container {
+        width: 3em;
+        border-radius: 35px;
+        margin-right: 1rem;
+    }
+
+    .share-box {
+        width: 100%;
+        height: 5em;
+        bottom: -2.6em;
+        left: 0;
+        border-radius: 0 0 10px 10px;
+    }
+    
+    .share-box:before {
+        bottom: 4em;
+        left: 14.5em;
+    }
+}
